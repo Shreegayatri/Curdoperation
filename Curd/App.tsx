@@ -5,11 +5,22 @@
  * @format
  */
 
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {View} from 'react-native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Home from './android/app/src/components/Home';
+import Crud from './android/app/src/components/Crud';
 
-function App(): React.JSX.Element {
-  return <View></View>;
-}
+const Stack = createNativeStackNavigator();
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Crud" component={Crud} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
 export default App;
