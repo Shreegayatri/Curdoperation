@@ -9,15 +9,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './android/app/src/components/Home';
-import Crud from './android/app/src/components/Crud';
+import Create from './android/app/src/components/Create';
+import Read from './android/app/src/components/Read';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Read">
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Crud" component={Crud} />
+        <Stack.Screen name="Create" component={Create} />
+        <Stack.Screen name="Read" component={Read} />
       </Stack.Navigator>
     </NavigationContainer>
   );
