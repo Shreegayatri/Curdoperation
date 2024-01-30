@@ -4,16 +4,16 @@ import {
   StyleSheet,
   TextInput,
   Pressable,
-  Button,
+  // Button,
   // SafeAreaView,
 } from 'react-native';
 import React, {useState} from 'react';
 import {API_URL} from '../Constants/url';
 import axios from 'axios';
-import {useNavigation} from '@react-navigation/native';
+// import {useNavigation} from '@react-navigation/native';
 
 const Create = () => {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   console.log('->', name);
@@ -47,12 +47,6 @@ const Create = () => {
           <Pressable style={styles.btnCreate} onPress={submitPress}>
             <Text style={styles.textDesign}>Add +</Text>
           </Pressable>
-        </View>
-        <View>
-          <Button
-            title="Go to the crud"
-            onPress={() => navigation.navigate('Read')}
-          />
         </View>
       </View>
     </View>
